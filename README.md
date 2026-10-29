@@ -1,4 +1,4 @@
-# onec-perf-agent — ИИ-агент анализа производительности 1С
+# ИИ-агент анализа производительности 1С
 
 **AI-powered performance testing and profiling agent for 1C:Enterprise.**
 
