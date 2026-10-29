@@ -1,4 +1,4 @@
-# onec-perf-agent
+# onec-perf-agent — ИИ-агент анализа производительности 1С
 
 **AI-powered performance testing and profiling agent for 1C:Enterprise.**
 
@@ -13,6 +13,26 @@
 - Сопоставление метрик с исходным кодом конфигурации.
 - Поиск узких мест и формирование рекомендаций по оптимизации.
 - Генерация отчётов с приоритетами и подтверждающими метриками.
+
+## Верхнеуровневая архитектура
+
+```mermaid
+flowchart TD
+    A["AI Orchestrator"] --> B["Test Runner"]
+    B --> C["YAxUnit / Vanessa Automation"]
+    C --> D["1C:Enterprise"]
+    D --> E["Metrics Collectors"]
+    E --> F["1C Tech Log"]
+    E --> G["MS SQL Server"]
+    E --> H["Performance Profiler"]
+    F --> I["AI Analyzer"]
+    G --> I
+    H --> I
+    J["1C Source Code"] --> I
+    I --> K["Performance Report"]
+```
+
+Оркестратор управляет выполнением тестов и сбором диагностики. Анализатор сопоставляет метрики с исходниками, выявляет проблемные участки и формирует отчёт. Конкретные способы интеграции будут определены в ходе исследования.
 
 ## MVP
 
